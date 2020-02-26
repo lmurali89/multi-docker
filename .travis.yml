@@ -4,7 +4,6 @@ services:
   
 before_install:
   - docker build -t lmurali89/react-test -f ./client/Dockerfile.dev ./client
-  - docker build myotherproject
   
 script:
   - docker run lmurali89/react-test npm test -- --coverage
